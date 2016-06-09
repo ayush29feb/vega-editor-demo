@@ -1,0 +1,78 @@
+{
+  "data": {"url": "data/gapminder.json"},
+  "transform": {"filter" : "datum.cluster == 2"},
+  "layers": [
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {"field": "country","type": "nominal"},
+        "x": {
+          "aggregate": "min",
+          "field": "life_expect",
+          "type": "quantitative",
+          "axis": {"title": "life_expect"}
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "life_expect",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": "tick",
+      "encoding": {
+        "y": {"field": "country","type": "nominal"},
+        "x": {
+          "aggregate": "min",
+          "field": "life_expect",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": "tick",
+      "encoding": {
+        "y": {"field": "country","type": "nominal"},
+        "x": {
+          "aggregate": "max",
+          "field": "life_expect",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "country","type": "nominal"},
+        "x": {
+          "aggregate": "q1",
+          "field": "life_expect",
+          "type": "quantitative"
+        },
+        "x2": {
+          "aggregate": "median",
+          "field": "life_expect",
+          "type": "quantitative"
+        },
+        "color": { "value" : "orange"}
+      }
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "country","type": "nominal"},
+        "x": {
+          "aggregate": "median",
+          "field": "life_expect",
+          "type": "quantitative"
+        },
+        "x2": {
+          "aggregate": "q3",
+          "field": "life_expect",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

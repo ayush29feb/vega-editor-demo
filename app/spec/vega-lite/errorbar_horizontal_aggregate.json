@@ -1,0 +1,19 @@
+{
+  "data": {"url": "data/gapminder.json"},
+  "transform": {"filter": "datum.cluster == 2"},
+  "mark": "errorBar",
+  "encoding": {
+    "y": {"field": "country","type": "nominal"},
+    "x": {
+      "field": "fertility",
+      "type": "quantitative",
+      "aggregate": "min",
+      "title": "Fertility"
+    },
+    "x2": {
+      "field": "fertility",
+      "type": "quantitative",
+      "aggregate": "max"
+    }
+  }
+}

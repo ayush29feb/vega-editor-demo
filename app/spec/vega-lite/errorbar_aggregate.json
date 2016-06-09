@@ -1,0 +1,19 @@
+{
+  "data": {"url": "data/gapminder.json"},
+  "transform": {"filter": "datum.cluster == 3"},
+  "mark": "errorBar",
+  "encoding": {
+    "x": {"field": "country","type": "nominal"},
+    "y": {
+      "field": "life_expect",
+      "type": "quantitative",
+      "aggregate": "min",
+      "title": "Life Expectency"
+    },
+    "y2": {
+      "field": "life_expect",
+      "type": "quantitative",
+      "aggregate": "max"
+    }
+  }
+}
