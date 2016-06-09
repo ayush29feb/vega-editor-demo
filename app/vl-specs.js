@@ -31,6 +31,12 @@ var VL_SPECS = {
         "backgroundSize": "150%"
       }
     }, {
+      "name": "boxplot",
+      "title": "Composite Box Plot",
+      "galleryParameters": {
+        "backgroundSize": "150%"
+      }
+    }, {
       "name": "horizontal_boxplot_extended",
       "title": "Horizontal Box Plot",
       "galleryParameters": {
