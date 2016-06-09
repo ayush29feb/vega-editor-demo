@@ -54,7 +54,8 @@
                 "rule",
                 "circle",
                 "square",
-                "errorBar"
+                "errorBar",
+                "boxPlot"
             ]
         },
         "Encoding": {
@@ -542,7 +543,8 @@
                 "min",
                 "max",
                 "argmin",
-                "argmax"
+                "argmax",
+                "boxMinMax"
             ]
         },
         "SortOrder": {
