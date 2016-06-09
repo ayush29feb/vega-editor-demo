@@ -1,0 +1,56 @@
+{
+  "data": {"url": "data/gapminder.json"},
+  "transform": {"filter": "datum.cluster == 3"},
+  "layers": [
+    {
+      "mark": "rule",
+      "encoding": {
+        "x": {"field": "country","type": "nominal"},
+        "y": {
+          "field": "life_expect",
+          "type": "quantitative",
+          "aggregate": "min",
+          "title": "Life Expectency"
+        },
+        "y2": {
+          "field": "life_expect",
+          "type": "quantitative",
+          "aggregate": "max"
+        }
+      }
+    },
+    {
+      "mark": "tick",
+      "encoding": {
+        "x": {"field": "country","type": "nominal"},
+        "y": {
+          "field": "life_expect",
+          "type": "quantitative",
+          "aggregate": "min"
+        }
+      }
+    },
+    {
+      "mark": "tick",
+      "encoding": {
+        "x": {"field": "country","type": "nominal"},
+        "y": {
+          "field": "life_expect",
+          "type": "quantitative",
+          "aggregate": "max"
+        }
+      }
+    },
+    {
+      "mark": "circle",
+      "encoding": {
+        "x": {"field": "country","type": "nominal"},
+        "y": {
+          "field": "life_expect",
+          "type": "quantitative",
+          "aggregate": "mean"
+        }
+      }
+    }
+  ]
+}

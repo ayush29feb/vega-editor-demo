@@ -1,0 +1,42 @@
+{
+  "data": {"url": "data/temps-sf-ny.csv"},
+  "layers": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "date","type": "temporal"},
+        "y": {
+          "field": "NY",
+          "type": "quantitative",
+          "axis": {"title": "Temprature"}
+        },
+        "color": {"value": "#000"}
+      }
+    },
+    {
+      "mark": "area",
+      "transform": {
+        "calculate": [{"field": "a","expr": "min(datum.NY, datum.SF)"}]
+      },
+      "encoding": {
+        "x": {"field": "date","type": "temporal"},
+        "y": {"field": "NY","type": "quantitative"},
+        "y2": {"field": "a","type": "quantitative"},
+        "color": {"value": "#95D049"}
+      }
+    },
+    {
+      "mark": "area",
+      "transform": {
+        "calculate": [{"field": "b","expr": "max(datum.NY, datum.SF)"}]
+      },
+      "encoding": {
+        "x": {"field": "date","type": "temporal"},
+        "y": {"field": "NY","type": "quantitative"},
+        "y2": {"field": "b","type": "quantitative"},
+        "color": {"value": "orange"}
+      }
+    }
+  ],
+  "config": {"cell": {"width": 600,"height": 300},"timeFormat": "%B"}
+}
