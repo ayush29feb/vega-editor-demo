@@ -1,7 +1,7 @@
 {
   "data": {"url": "data/gapminder.json"},
   "transform": {"filter": "datum.cluster == 4"},
-  "mark": "errorBar",
+  "mark": "boxPlot",
   "encoding": {
     "x": {"field": "country","type": "nominal"},
     "y": {
